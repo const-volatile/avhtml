@@ -1167,18 +1167,6 @@ void html::basic_dom<CharType>::html_parser(typename boost::coroutines::asymmetr
 				// 要做的就是一直忽略直到  -->
 				switch(c)
 				{
-					case '<':
-					{
-						c = getc();
-						if ( c == '!')
-						{
-							pre_state = state;
-							state = 10;
-						}else{
-							content += '<';
-							content += c;
-						}
-					}break;
 					case '-':
 					{
 						pre_state = state;
